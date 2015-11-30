@@ -1,8 +1,8 @@
 <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left"
             class="md-whiteframe-z2 md-sidenav-left">
-  <md-toolbar md-theme="custom" class="md-hue-1 md-whiteframe-z2">
-    <md-button layout="row" layout-align="center center" class="md-toolbar-tools md-primary"
-               href="https://github.com/flatlogic/angular-material-dashboard">
+  <md-toolbar md-theme="custom" class="md-accent md-whiteframe-z2">
+    <md-button layout="row" layout-align="center center" class="md-toolbar-tools"
+               href="#dashboard">
       <h1>CRS</h1>
     </md-button>
   </md-toolbar>
@@ -17,17 +17,12 @@
           </div>
       </md-button>
       <md-divider ng-repeat-end></md-divider>
-      <md-button hide-gt-md flex ng-click="vm.showActions($event)">
-          <div layout="row" class="md-tile-content">
-            Actions
-          </div>
-      </md-button>
 </md-sidenav>
 
 <div layout="column" flex>
     <md-toolbar layout="row" layout-align="end center">
         <md-button hide-sm class="toolbar-button" aria-label="Create CR">
-            <i class="material-icons">create</i>
+            <i class="material-icons">add_circle_outline</i>
         </md-button>
         <md-button hide-sm class="toolbar-button" aria-label="Search">
             <i class="material-icons">search</i>
@@ -38,9 +33,6 @@
         </md-button>
         <md-button hide-sm class="toolbar-button" aria-label="Settings">
             <i class="material-icons">settings</i>
-        </md-button>
-        <md-button hide-gt-sm ng-click="vm.toggleItemsList()" aria-label="Menu">
-            <i class="material-icons">menu</i>
         </md-button>
     </md-toolbar>
 
@@ -53,27 +45,15 @@
             class="md-whiteframe-z2 md-sidenav-right">
     <md-toolbar layout="row">
         <md-toolbar flex="80" class="md-primary" layout="row" layout-align="center center">
-            <img class="img-circle" ng-src="assets/images/feynman.jpg">
-            <md-menu>
-                <md-button class="capitalize" ng-click="$mdOpenMenu()" aria-label="Open menu">
-                    <span>Richard Feynman</span>
-                    <i class="material-icons">keyboard_arrow_down</i>
-                </md-button>
-                <md-menu-content>
-                    <md-menu-item><md-button ng-click="$mdCloseMenu()" ui-sref="home.profile">Profile</md-button></md-menu-item>
-                    <md-menu-item><md-button ng-click="$mdCloseMenu()" ui-sref="home.dashboard">Log out</md-button></md-menu-item>
-                </md-menu-content>
-            </md-menu>
+            <span>Richard Feynman</span>
         </md-toolbar>
-        <md-toolbar flex="20" layout="row" layout-align="center center">
-            <md-button ng-click="vm.showActions($event)" class="toolbar-button">
-                <i class="material-icons">more_vert</i>
-            </md-button>
-        </md-toolbar>
+        <md-button hide-sm class="toolbar-button" aria-label="Logout">
+            <i class="material-icons">exit_to_app</i>
+        </md-button>
     </md-toolbar>
 
     <section>
-        <md-toolbar md-theme="grey" class="md-hue-1">
+        <md-toolbar md-theme="grey" class="md-accent">
             <div class="md-toolbar-tools">
                 <h3>Activity Log</h3>
             </div>
